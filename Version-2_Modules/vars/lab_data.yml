@@ -1,0 +1,116 @@
+---
+# Lab Data for Customer Test Lab
+switch_list:
+   CTL1-EXT-PRDSW-001:
+       template: "base-sw.j2"
+   CTL1-PRD-SLEAF-006:
+       template: "base-sw.j2"
+
+data:
+  CTL1-EXT-PRDSW-001:
+      virtualMAC: "00:1C:73:ee:01:01"
+      mgmt_port: "Eth8"
+      name: "CTL1-EXT-PRDSW-001"
+      mgmtIP: "192.168.30.117/24"
+      mgmtGW: "192.168.30.1"
+      location: "CTL1-DC1"
+      Env: "PRD"
+      STPpriority: "49152"
+      ring: "DC"
+      mgmt_swi: "CTL1-OOB-MLEAF-001"
+
+  Test_SW:
+      virtualMAC: "00:1C:73:bb:02:02"
+      mgmt_port: "Eth8"
+      name: "CTL1-EXT-TestSW-001"
+      mgmtIP: "127.0.0.10/24"
+      mgmtGW: "127.0.0.1"
+      location: "CTL1-DC1"
+      Env: "TST"
+      STPpriority: "49152"
+      ring: "TST"
+      mgmt_swi: "CTL1-OOB-MLEAF-001"
+
+  None:
+      virtualMAC: "00:00:00:00:00:00"
+      mgmt_port: "Eth0"
+      name: "Test Template"
+      mgmtIP: "127.0.0.10/24"
+      mgmtGW: "127.0.0.1"
+      location: "Test_Template"
+      Env: "TST"
+      STPpriority: "49152"
+      ring: "TST"
+      mgmt_swi: "Test_Template"
+
+  CTL1-PRD-SLEAF-006:
+      virtualMAC: "00:1C:73:ee:01:05"
+      mgmt_port: "Eth8"
+      name: "CTL1-PRD-SLEAF-006"
+      mgmtIP: "192.168.30.114/24"
+      mgmtGW: "192.168.30.1"
+      location: "CTL1-DC1"
+      Env: "PRD"
+      STPpriority: "49152"
+      ring: "DC"
+      mgmt_swi: "CTL1-OOB-SLEAF-003"
+
+  siteConstants:
+    vMACid: "1.0"
+    MLAGDomain: "1000"
+    mgmtVRF: "MGMNT"
+    mgmtRD: "64900:00001"
+    STPmode: "MSTP"
+    MLAGpeer: "vlan4094"
+    MLAGPoChNo.: "Po1000"
+    iBGP_PW: "ctl1bgp4094"
+    eBGP_PW: "ctl3bgp4094"
+    iBGPPeer: "vlan4094"
+
+    ASNrange_PRD: [
+      ["65080.2001","4265084881"],
+      ["65080.2099","4265084979"]]
+
+    PeerNet_PRD: [
+      "192.168.0.0/24",
+      "192.168.1.0/24",
+      "192.168.2.0/24",
+      "192.168.3.0/24",
+      "192.168.4.0/24"]
+
+    PeerNet_OOB: [
+      "192.168.5.0/24",
+      "192.168.6.0/24",
+      "192.168.7.0/24",
+      "192.168.8.0/24",
+      "192.168.9.0/24",
+      "192.168.10.0/24"]
+
+    ASNrange_OOB: [
+      ["65080.1001","4265083881"],
+      ["65080.1099","4265083979"]
+      ]
+
+
+    highLeafType:
+      ["OOB-SLEAF","OOB-MLEAF","POP-WLEAF"]
+
+    lowLeafType:
+      ["PRD-GLEAF","PRD-SLEAF"]
+
+configlets:
+  Test_Configlet: "! This is a Testing Configlet\n! it has no affect on the Device but has been changed again\n!\ninterface loopback 999\n  description Test Interface_1\n  ip address 192.168.99.99/32\n  no shutdown\nexit"
+  Test_Configlet_2: "! This is a Testing Configlet\n! it has no affect on the Device\n!\ninterface loopback 998\n  description Test Interface_2\n  ip address 192.168.99.98/32\n  no shutdown\nexit"
+  Test_Configlet_3: "! This is a Testing Configlet\n! it has no affect on the Device\n!\ninterface loopback 997\n  description Test Interface_3\n  ip address 192.168.99.97/32\n  no shutdown\nexit"
+  Test_Configlet_4: "! This is a Testing Configlet\n! it has no affect on the Device\n!\ninterface loopback 996\n  description Test Interface_4\n  ip address 192.168.99.96/32\n  no shutdown\nexit"
+  Test_Configlet_5: "! This is a Testing Configlet\n! it has no affect on the Device\n!\ninterface loopback 995\n  description Test Interface_5\n  ip address 192.168.99.95/32\n  no shutdown\nexit"
+  CTL1-PRD-GLEAF-001_base-sw: "!Test Configured from J2template_base-sw\n! Configlet Builder CTL1-PRD-GLEAF-001_BasicConfig\n!\nhostname CTL1-PRD-GLEAF-001\n!\nip routing\n!\n! Build Management VRF if not default\nvrf definition MGMNT\n   description ManagementVRF\n   rd 64900:00001\nexit\n!\nno ip routing vrf MGMNT\nip route vrf MGMNT 0.0.0.0/0 192.168.30.1\n!\n! Build Management Config\n!\nmanagement api http-commands\nprotocol unix-socket\n cors allowed-origin all\n no shutdown\nvrf  MGMNT\n   no shutdown\n   exit\n!\ninterface Management 1\ndescription CTL1-PRD-GLEAF-001-MGMNT_Test\n   vrf forwarding MGMNT\n ip address 192.168.30.115/24\nexit\n!\n! Create Spanning Tree Config\n! Configure SpanningTree from the start in case of loops\nspanning-tree mode MSTP\nspanning-tree portfast bpduguard default\nspanning-tree priority 49152\n!\n! Virtual MAC for vARP\nip virtual-router mac-address 00:1C:73:ee:01:01\n!"
+  CTL1-PRD-GLEAF-001_base-chk: "!Test Configured and changed from cv_configlets"
+  CTL1-PRD-GLEAF-001_base-firewall: "!Test Configured and changed from cv_configlets but its changed"
+  CTL1-PRD-GLEAF-002_base-chk: "!Test Configured from and changed cv_configlets"
+  CTL1-PRD-GLEAF-002_base-firewall: "!Test Configured and changed from cv_configlets but its changed"
+  CTL1-PRD-SLEAF-001_base-chk: "!Test Configured from cv_configlets"
+  CTL1-PRD-SLEAF-001_base-firewall: "!Test Configured from cv_configlets but its changed"
+  CTL1-PRD-SLEAF-002_base-chk: "!Test Configured from cv_configlets"
+  CTL1-PRD-SLEAF-002_base-firewall: "!Test Configured from cv_configlets but its changed"
+...

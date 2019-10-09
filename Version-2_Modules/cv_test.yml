@@ -1,0 +1,26 @@
+---
+- name: CVP_Test
+  gather_facts: no
+  connection: local
+  hosts: cvpapln
+  vars_files:
+    - vars/lab_data.yml
+  tasks:
+    - name: CV_FACTS
+      cv_facts:
+        host: "{{ansible_host}}"
+        username: "{{username}}"
+        password: "{{password}}"
+      register: cvp_facts
+    - name: CV_CONFIGLET
+      cv_configlet:
+        host: "{{ansible_host}}"
+        username: "{{username}}"
+        password: "{{password}}"
+        cvp_facts: "{{cvp_facts}}"
+        configlets: "{{configlets}}"
+        cvp_filter: ["Test","base-chk","base-firewall"]
+      check_mode: no
+      register: cvp_configlet
+    - debug:
+        var: cvp_configlet
