@@ -93,7 +93,7 @@ def cv_facts(module):
     # Associated Images, and Associated Configlets
     deviceField = {'hostname':'name','fqdn':'fqdn','complianceCode':'complianceCode',
                    'complianceIndication':'complianceIndication','version':'version',
-                   'systemMacAddress':'systemMacAddress','systemMacAddress':'key',
+                   'ipAddress':'ipAddress','systemMacAddress':'key',
                    'parentContainerKey':'parentContainerKey'}
     facts['devices'] = []
 
