@@ -388,7 +388,7 @@ def main():
         password=dict(required=True),
         devices=dict(type='dict',required=True),
         cvp_facts=dict(type='dict',required=True),
-        devices_filter=dict(type='list', default='none')
+        device_filter=dict(type='list', default='none')
         )
 
     module = AnsibleModule(argument_spec=argument_spec,
