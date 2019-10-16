@@ -19,8 +19,20 @@
         password: "{{password}}"
         cvp_facts: "{{cvp_facts}}"
         configlets: "{{configlets}}"
-        cvp_filter: ["Test","base-chk","base-firewall"]
+        configlet_filter: ["Test","base-chk","base-firewall"]
       check_mode: no
       register: cvp_configlet
     - debug:
         var: cvp_configlet
+    - name: CV_DEVICE
+      cv_device:
+        host: "{{ansible_host}}"
+        username: "{{username}}"
+        password: "{{password}}"
+        cvp_facts: "{{cvp_facts}}"
+        devices: "{{devices}}"
+        device_filter: ["all"]
+      check_mode: no
+      register: cvp_device
+    - debug:
+        var: cvp_device

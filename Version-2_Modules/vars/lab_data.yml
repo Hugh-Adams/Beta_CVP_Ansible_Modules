@@ -116,180 +116,179 @@ configlets:
 
 devices:
   CTL1-PRD-GLEAF-001:
-      configlets: [
-          "CTL1-PRD-GLEAF-001_base-sw"
-          "CTL1-PRD-GLEAF-001_nw"
-          "CTL1-PRD-GLEAF-001_gw"
-          "Test_Configlet"
+    configlets: [
+      "CTL1-PRD-GLEAF-001_base-sw",
+      "CTL1-PRD-GLEAF-001_nw",
+      "CTL1-PRD-GLEAF-001_gw"
       ]
-      fqdn: "CTL1-PRD-GLEAF-001"
-      imageBundle: ""
-      ipAddress: "192.168.30.115"
-      key: "00:50:56:ce:26:06"
-      name: "CTL1-PRD-GLEAF-001"
-      parentContainerKey: "container_14_1967751822992"
-      parentContainerName: "CTL_DC1_GLEAF"
-      version: "4.20.11.1M"
+    fqdn: "CTL1-PRD-GLEAF-001"
+    imageBundle: ""
+    ipAddress: "192.168.30.115"
+    key: "00:50:56:ce:26:06"
+    name: "CTL1-PRD-GLEAF-001"
+    parentContainerKey: "container_14_1967751822992"
+    parentContainerName: "CTL_DC1_GLEAF"
+    version: "4.20.11.1M"
 
-    CTL1-PRD-GLEAF-002:
-        configlets: [
-            "CTL1-PRD-GLEAF-002_base-sw"
-            "CTL1-PRD-GLEAF-002_nw"
-            "CTL1-PRD-GLEAF-002_gw"
-        ]
-        fqdn: "CTL1-PRD-GLEAF-002"
-        imageBundle: ""
-        ipAddress: "192.168.30.116"
-        key: "00:50:56:63:d5:2a"
-        name: "CTL1-PRD-GLEAF-002"
-        parentContainerKey: "container_14_1967751822992"
-        parentContainerName: "CTL_DC1_GLEAF"
-        version: "4.20.11.1M"
+  CTL1-PRD-GLEAF-002:
+    configlets: [
+      "CTL1-PRD-GLEAF-002_base-sw",
+      "CTL1-PRD-GLEAF-002_nw",
+      "CTL1-PRD-GLEAF-002_gw"
+      ]
+    fqdn: "CTL1-PRD-GLEAF-002"
+    imageBundle: ""
+    ipAddress: "192.168.30.116"
+    key: "00:50:56:63:d5:2a"
+    name: "CTL1-PRD-GLEAF-002"
+    parentContainerKey: "container_14_1967751822992"
+    parentContainerName: "CTL_DC1_GLEAF"
+    version: "4.20.11.1M"
 
-    CTL1-PRD-SLEAF-001:
-        configlets: [
-            "CTL1-PRD-SLEAF-001_base-sw"
-            "CTL1-PRD-SLEAF-001_nw"
-            "CTL1-PRD-SLEAF-001_ep"
-            "Test_Configlet_5"
-        ]
-        fqdn: "CTL1-PRD-SLEAF-001"
-        imageBundle: ""
-        ipAddress: "192.168.30.109"
-        key: "00:50:56:49:88:41"
-        name: "CTL1-PRD-SLEAF-001"
-        parentContainerKey: "container_15_1967788599937"
-        parentContainerName: "CTL1_DC1_SLEAF"
-        version: "4.20.11.1M"
+  CTL1-PRD-SLEAF-001:
+    configlets: [
+      "CTL1-PRD-SLEAF-001_base-sw",
+      "CTL1-PRD-SLEAF-001_nw",
+      "CTL1-PRD-SLEAF-001_ep",
+      "Test_Configlet_5"
+      ]
+    fqdn: "CTL1-PRD-SLEAF-001"
+    imageBundle: ""
+    ipAddress: "192.168.30.109"
+    key: "00:50:56:49:88:41"
+    name: "CTL1-PRD-SLEAF-001"
+    parentContainerKey: "container_15_1967788599937"
+    parentContainerName: "CTL1_DC1_SLEAF"
+    version: "4.20.11.1M"
 
-    CTL1-PRD-SLEAF-002:
-        configlets: [
-            "CTL1-PRD-SLEAF-002_base-sw"
-            "CTL1-PRD-SLEAF-002_nw"
-            "CTL1-PRD-SLEAF-002_ep"
-        ]
-        fqdn: "CTL1-PRD-SLEAF-002"
-        imageBundle: ""
-        ipAddress: "192.168.30.110"
-        key: "00:50:56:12:47:9d"
-        name: "CTL1-PRD-SLEAF-002"
-        parentContainerKey: "container_15_1967788599937"
-        parentContainerName: "CTL1_DC1_SLEAF"
-        version: "4.20.11.1M"
+  CTL1-PRD-SLEAF-002:
+    configlets: [
+      "CTL1-PRD-SLEAF-002_base-sw",
+      "CTL1-PRD-SLEAF-002_nw",
+      "CTL1-PRD-SLEAF-002_ep"
+      ]
+    fqdn: "CTL1-PRD-SLEAF-002"
+    imageBundle: ""
+    ipAddress: "192.168.30.110"
+    key: "00:50:56:12:47:9d"
+    name: "CTL1-PRD-SLEAF-002"
+    parentContainerKey: "container_15_1967788599937"
+    parentContainerName: "CTL1_DC1_SLEAF"
+    version: "4.20.11.1M"
 
-    CTL1-PRD-SLEAF-003: {
-        configlets: [
-            "CTL1-PRD-SLEAF-003_base-sw"
-            "CTL1-PRD-SLEAF-003_nw"
-            "CTL1-PRD-SLEAF-003_ep"
-        ]
-        fqdn: "CTL1-PRD-SLEAF-003"
-        imageBundle: ""
-        ipAddress: "192.168.30.111"
-        key: "00:50:56:1c:1f:00"
-        name: "CTL1-PRD-SLEAF-003"
-        parentContainerKey: "container_15_1967788599937"
-        parentContainerName: "CTL1_DC1_SLEAF"
-        version: "4.20.11.1M"
+  CTL1-PRD-SLEAF-003:
+    configlets: [
+      "CTL1-PRD-SLEAF-003_base-sw",
+      "CTL1-PRD-SLEAF-003_nw",
+      "CTL1-PRD-SLEAF-003_ep"
+      ]
+    fqdn: "CTL1-PRD-SLEAF-003"
+    imageBundle: ""
+    ipAddress: "192.168.30.111"
+    key: "00:50:56:1c:1f:00"
+    name: "CTL1-PRD-SLEAF-003"
+    parentContainerKey: "container_15_1967788599937"
+    parentContainerName: "CTL1_DC1_SLEAF"
+    version: "4.20.11.1M"
 
-    CTL1-PRD-SLEAF-004: {
-        configlets: [
-            "CTL1-PRD-SLEAF-004_base-sw"
-            "CTL1-PRD-SLEAF-004_nw"
-            "CTL1-PRD-SLEAF-004_ep"
-        ]
-        fqdn: "CTL1-PRD-SLEAF-004"
-        imageBundle: ""
-        ipAddress: "192.168.30.112"
-        key: "00:50:56:bc:3b:f5"
-        name: "CTL1-PRD-SLEAF-004"
-        parentContainerKey: "container_15_1967788599937"
-        parentContainerName: "CTL1_DC1_SLEAF"
-        version: "4.20.11.1M"
+  CTL1-PRD-SLEAF-004:
+    configlets: [
+      "CTL1-PRD-SLEAF-004_base-sw",
+      "CTL1-PRD-SLEAF-004_nw",
+      "CTL1-PRD-SLEAF-004_ep"
+      ]
+    fqdn: "CTL1-PRD-SLEAF-004"
+    imageBundle: ""
+    ipAddress: "192.168.30.112"
+    key: "00:50:56:bc:3b:f5"
+    name: "CTL1-PRD-SLEAF-004"
+    parentContainerKey: "container_15_1967788599937"
+    parentContainerName: "CTL1_DC1_SLEAF"
+    version: "4.20.11.1M"
 
-    CTL1-PRD-SPINE-001: {
-        configlets: [
-            "CTL1-PRD-SPINE-001_base-sw"
-            "CTL1-PRD-SPINE-001_spine"
-        ]
-        fqdn: "CTL1-PRD-SPINE-001"
-        imageBundle: ""
-        ipAddress: "192.168.30.105"
-        key: "00:50:56:2f:fd:84"
-        name: "CTL1-PRD-SPINE-001"
-        parentContainerKey: "container_20_1968010057136"
-        parentContainerName: "CTL_DC1_SPINE"
-        version: "4.20.11.1M"
+  CTL1-PRD-SPINE-001:
+    configlets: [
+      "CTL1-PRD-SPINE-001_base-sw",
+      "CTL1-PRD-SPINE-001_spine"
+      ]
+    fqdn: "CTL1-PRD-SPINE-001"
+    imageBundle: ""
+    ipAddress: "192.168.30.105"
+    key: "00:50:56:2f:fd:84"
+    name: "CTL1-PRD-SPINE-001"
+    parentContainerKey: "container_20_1968010057136"
+    parentContainerName: "CTL_DC1_SPINE"
+    version: "4.20.11.1M"
 
-    CTL1-PRD-SPINE-002: {
-        configlets: [
-            "CTL1-PRD-SPINE-002_base-sw"
-            "CTL1-PRD-SPINE-002_spine"
-        ]
-        fqdn: "CTL1-PRD-SPINE-002"
-        imageBundle: ""
-        ipAddress: "192.168.30.106"
-        key: "00:50:56:a6:af:04"
-        name: "CTL1-PRD-SPINE-002"
-        parentContainerKey: "container_20_1968010057136"
-        parentContainerName: "CTL_DC1_SPINE"
-        version: "4.20.11.1M"
+  CTL1-PRD-SPINE-002:
+    configlets: [
+      "CTL1-PRD-SPINE-002_base-sw",
+      "CTL1-PRD-SPINE-002_spine"
+      ]
+    fqdn: "CTL1-PRD-SPINE-002"
+    imageBundle: ""
+    ipAddress: "192.168.30.106"
+    key: "00:50:56:a6:af:04"
+    name: "CTL1-PRD-SPINE-002"
+    parentContainerKey: "container_20_1968010057136"
+    parentContainerName: "CTL_DC1_SPINE"
+    version: "4.20.11.1M"
 
-    CTL1-PRD-SPINE-003: {
-        configlets: [
-            "CTL1-PRD-SPINE-003_base-sw"
-            "CTL1-PRD-SPINE-003_spine"
-        ]
-        fqdn: "CTL1-PRD-SPINE-003"
-        imageBundle: ""
-        ipAddress: "192.168.30.107"
-        key: "00:50:56:22:71:67"
-        name: "CTL1-PRD-SPINE-003"
-        parentContainerKey: "container_20_1968010057136"
-        parentContainerNam": "CTL_DC1_SPINE"
-        version: "4.20.11.1M"
+  CTL1-PRD-SPINE-003:
+    configlets: [
+      "CTL1-PRD-SPINE-003_base-sw",
+      "CTL1-PRD-SPINE-003_spine"
+      ]
+    fqdn: "CTL1-PRD-SPINE-003"
+    imageBundle: ""
+    ipAddress: "192.168.30.107"
+    key: "00:50:56:22:71:67"
+    name: "CTL1-PRD-SPINE-003"
+    parentContainerKey: "container_20_1968010057136"
+    parentContainerNam": "CTL_DC1_SPINE"
+    version: "4.20.11.1M"
 
-    CTL1-PRD-SPINE-004: {
-        configlets: [
-            "CTL1-PRD-SPINE-004_base-sw"
-            "CTL1-PRD-SPINE-004_spine"
-        ]
-        fqdn: "CTL1-PRD-SPINE-004"
-        imageBundle: ""
-        ipAddress: "192.168.30.108"
-        key: "00:50:56:08:be:d7"
-        name: "CTL1-PRD-SPINE-004"
-        parentContainerKey: "container_20_1968010057136"
-        parentContainerName: "CTL_DC1_SPINE"
-        version: "4.20.11.1M"
+  CTL1-PRD-SPINE-004:
+    configlets: [
+      "CTL1-PRD-SPINE-004_base-sw",
+      "CTL1-PRD-SPINE-004_spine"
+      ]
+    fqdn: "CTL1-PRD-SPINE-004"
+    imageBundle: ""
+    ipAddress: "192.168.30.108"
+    key: "00:50:56:08:be:d7"
+    name: "CTL1-PRD-SPINE-004"
+    parentContainerKey: "container_20_1968010057136"
+    parentContainerName: "CTL_DC1_SPINE"
+    version: "4.20.11.1M"
 
-    CTL1-PRD-SLEAF-005: {
-        configlets: [
-            "CTL1-PRD-SLEAF-005_base-sw"
-            "CTL1-PRD-SLEAF-005_nw"
-            "CTL1-PRD-SLEAF-005_gw"
-          ]
-        fqdn: "CTL1-PRD-SLEAF-005.ctl.lab.local"
-        imageBundle: ""
-        ipAddress: "192.168.30.113"
-        key: "00:50:56:42:cc:05"
-        name: "CTL1-PRD-SLEAF-005"
-        parentContainerKey: "container_15_1967788599937"
-        parentContainerName: "CTL1_DC1_SLEAF"
-        version: "4.20.11.1M"
+  CTL1-PRD-SLEAF-005:
+    configlets: [
+      "CTL1-PRD-SLEAF-005_base-sw",
+      "CTL1-PRD-SLEAF-005_nw",
+      "CTL1-PRD-SLEAF-005_gw"
+      ]
+    fqdn: "CTL1-PRD-SLEAF-005.ctl.lab.local"
+    imageBundle: ""
+    ipAddress: "192.168.30.113"
+    key: "00:50:56:42:cc:05"
+    name: "CTL1-PRD-SLEAF-005"
+    parentContainerKey: "container_15_1967788599937"
+    parentContainerName: "CTL1_DC1_SLEAF"
+    version: "4.20.11.1M"
 
-    CTL1-PRD-SLEAF-006: {
-        configlets: [
-            "CTL1-PRD-SLEAF-006_base-sw"
-            "CTL1-PRD-SLEAF-006_nw"
-            "CTL1-PRD-SLEAF-006_gw"
-          ]
-        fqdn: "CTL1-PRD-SLEAF-006.ctl.lab.local"
-        imageBundle: ""
-        ipAddress: "192.168.30.114"
-        key: "00:50:56:6f:b6:1e"
-        name: "CTL1-PRD-SLEAF-006"
-        parentContainerKey: "container_15_1967788599937"
-        parentContainerName: "CTL1_DC1_SLEAF"
-        version: "4.20.11.1M"
+  CTL1-PRD-SLEAF-006:
+    configlets: [
+      "CTL1-PRD-SLEAF-006_base-sw",
+      "CTL1-PRD-SLEAF-006_nw",
+      "CTL1-PRD-SLEAF-006_gw"
+      ]
+    fqdn: "CTL1-PRD-SLEAF-006.ctl.lab.local"
+    imageBundle: ""
+    ipAddress: "192.168.30.114"
+    key: "00:50:56:6f:b6:1e"
+    name: "CTL1-PRD-SLEAF-006"
+    parentContainerKey: "container_15_1967788599937"
+    parentContainerName: "CTL1_DC1_SLEAF"
+    version: "4.20.11.1M"
 ...
