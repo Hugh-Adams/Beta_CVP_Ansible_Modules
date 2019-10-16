@@ -94,7 +94,7 @@ class CvpApi(object):
         return data
 
     # ~Device Related API Calls
-    
+
     def get_inventory(self, start=0, end=0, provisioned = "true"):
         ''' Returns the a dict of the net elements known to CVP.
 
@@ -293,8 +293,8 @@ class CvpApi(object):
             self.log.debug('Device %s : %s'%(device['fqdn'],e))
             raise Exception ("update_configlets_on_device:%s" %e)
         configlets = []
-        for configlet in self.get_configlets_by_device_id(device['systemMacAddress']):
-            configlets.append(configlet['name'])
+        #for configlet in self.get_configlets_by_device_id(device['systemMacAddress']):
+        #    configlets.append(configlet['name'])
         if create_task:
             url = '/provisioning/v2/saveTopology.do'
             tasks = self.clnt.post(url, data=[], timeout=self.request_timeout)
@@ -796,7 +796,7 @@ class CvpApi(object):
             url = '/provisioning/v2/saveTopology.do'
             tasks = self.clnt.post(url, data=[], timeout=self.request_timeout)
             return tasks
-    
+
     # ~Image Related API Calls
 
     def get_image_bundles(self, start=0, end=0):
@@ -817,7 +817,7 @@ class CvpApi(object):
         return self.clnt.get('/image/getImageBundles.do?queryparam=&'
                              'startIndex=%d&endIndex=%d' % (start, end),
                              timeout=self.request_timeout)
-    
+
     # ~Task Related API Calls
 
     def get_tasks(self, start=0, end=0):
