@@ -34,7 +34,7 @@ DOCUMENTATION = """
 ---
 module: cv_configlet
 version_added: "2.2"
-author: "EMEA AS (ansible-dev@arista.com)"
+author: "Hugh Adams EMEA AS (ansible-dev@arista.com)"
 short_description: Create, Delete, or Update CloudVision Portal Configlets.
 description:
   - CloudVison Portal Configlet compares the list of configlets and config in

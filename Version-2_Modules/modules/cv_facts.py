@@ -34,7 +34,7 @@ DOCUMENTATION = """
 ---
 module: cv_facts
 version_added: "1.0"
-author: "Hugh Adams EMEA AS Team(ha@arista.com)"
+author: "Hugh Adams EMEA AS Team(ansible_dev@arista.com)"
 short_description: Collect facts from CloudVision Portal.
 description:
   - Returns the list of devices, configlets, containers and images
